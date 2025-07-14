@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>音ブロック変換ツール</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f5f5f5; }
+    h1 { font-size: 1.5em; }
+    input[type="file"] { margin-top: 10px; }
+    table { margin-top: 20px; border-collapse: collapse; width: 100%; }
+    td, th { border: 1px solid #ccc; padding: 6px; text-align: center; }
+    #downloadBtn { margin-top: 20px; display: none; }
+  </style>
+</head>
+<body>
+  <h1>🎵 音ブロック変換ツール</h1>
+  <p>MP3ファイルをアップロードすると、マイクラ音ブロックの「押す回数」と「リピーター遅延」が表示されます。</p>
+  <input type="file" id="fileInput" accept=".mp3" />
+  <div id="status"></div>
+  <table id="resultTable">
+    <thead>
+      <tr><th>順番</th><th>押す回数</th><th>リピーター遅延</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <button id="downloadBtn">📥 結果をダウンロード</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/pitchy@2.0.2/+esm" type="module"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
